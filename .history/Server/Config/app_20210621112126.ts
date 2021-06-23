@@ -1,6 +1,4 @@
-/* db.ts : Viktoriia Romaniuk : 301079072 : Book List */
-
-// modules for node and express
+// moddules for node and express
 import createError from 'http-errors';
 import express from 'express';
 import path from 'path';
@@ -13,8 +11,7 @@ import mongoose, { mongo } from 'mongoose';
 // URI
 import * as DBConfig from './db';
 
-// VR: Replaced LOcalURI with Remote pointing to Atals Mongo DB
-mongoose.connect(process.env.URI || DBConfig.RemoteURI, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.URI || DBConfig.LocalURI, {useNewUrlParser: true, useUnifiedTopology: true});
 
 const db = mongoose.connection; // alias for the mongoose connection
 db.on("error", function()
