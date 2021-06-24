@@ -81,21 +81,7 @@ router.get('/:id', (req, res, next) => {
      * ADD CODE HERE *
      *****************/
 
-    // Adding router logic for edit GET
-    let id = req.params.id;
-
-     Book.findById(id, (err:Error, book: any) => {
-         if (err) 
-         {
-             console.log(err);
-             res.end(err);
-         }
-         else
-         {
-             // show the edit view
-             res.render('books/details', { title: book.Title, page: 'Book edit', books: book})
-         }
-     });
+    
 
 });
 
