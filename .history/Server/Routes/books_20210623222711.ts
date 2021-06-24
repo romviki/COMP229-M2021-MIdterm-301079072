@@ -51,25 +51,7 @@ router.post('/add', (req, res, next) => {
      *****************/
 
     // Adding submit processing logic adding 
-    let newBook = new Book({
-      "Title": req.body.title,
-      "Price": req.body.price,
-      "Author": req.body.author,
-      "Genre": req.body.genre
-    });
-
-     Book.create(newBook, (err: Error, book : any) => {
-      if (err)
-      {
-          console.log(err);
-          res.end(err);
-      }
-      else 
-      {
-          // refresh the contact list
-          res.redirect('/books')
-      }
-  });
+    
 
 
 });
