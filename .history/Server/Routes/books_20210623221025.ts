@@ -5,9 +5,6 @@ import express from 'express';
 const router = express.Router();
 export default router;
 
-// Import Book model object
-import Book from '../Models/books';
-
 // define the book model
 import book from '../Models/books';
 
@@ -36,10 +33,6 @@ router.get('/add', (req, res, next) => {
     /*****************
      * ADD CODE HERE *
      *****************/
-
-    // Create new Book object and pass it as a reference to the details view
-    let book = new Book();
-    res.render('books/details', { title: 'New Book', page: 'New Book', books: book});
 
 });
 

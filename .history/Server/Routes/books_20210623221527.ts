@@ -5,9 +5,6 @@ import express from 'express';
 const router = express.Router();
 export default router;
 
-// Import Book model object
-import Book from '../Models/books';
-
 // define the book model
 import book from '../Models/books';
 

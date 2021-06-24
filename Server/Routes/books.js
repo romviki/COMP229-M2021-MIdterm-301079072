@@ -7,8 +7,9 @@ const express_1 = __importDefault(require("express"));
 const router = express_1.default.Router();
 exports.default = router;
 const books_1 = __importDefault(require("../Models/books"));
+const books_2 = __importDefault(require("../Models/books"));
 router.get('/', (req, res, next) => {
-    books_1.default.find((err, books) => {
+    books_2.default.find((err, books) => {
         if (err) {
             return console.error(err);
         }
@@ -22,6 +23,8 @@ router.get('/', (req, res, next) => {
     });
 });
 router.get('/add', (req, res, next) => {
+    let book = new books_1.default();
+    res.render('books/details', { title: 'New Book', page: 'New Book', books: book });
 });
 router.post('/add', (req, res, next) => {
 });

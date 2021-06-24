@@ -1,5 +1,3 @@
-/* index.ts : Viktoriia Romaniuk : 301079072 : Book List */
-
 // modules required for routing
 import express from 'express';
 const router = express.Router();
