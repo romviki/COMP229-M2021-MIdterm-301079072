@@ -82,13 +82,6 @@ router.get('/delete/:id', (req, res, next) => {
             res.end(err);
         }
         else {
-            books_1.default.remove({ "_id": bookId }, (err) => {
-                if (err) {
-                    console.log(err);
-                    res.end(err);
-                }
-                console.log("Delete id: " + bookId);
-            });
             res.redirect('/books');
         }
     });
