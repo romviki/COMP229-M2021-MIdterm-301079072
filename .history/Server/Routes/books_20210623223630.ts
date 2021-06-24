@@ -140,28 +140,7 @@ router.get('/delete/:id', (req, res, next) => {
      *****************/
 
     // Adding GET logic for delete route
-    let bookId = req.params.id;
-
-    Book.remove({"_id": bookId}, (err:Error) => {
-     if (err) 
-     {
-         console.log(err);
-         res.end(err);
-     }
-     else
-     {
-         Book.remove({"_id": bookId}, (err:Error) => {
-             if (err) 
-             {
-                 console.log(err);
-                 res.end(err);
-             }
-             console.log("Delete id: " + bookId);
-         });
-         // refresh the contact list
-         res.redirect('/books');
-     }
- });
+    
 });
 
 

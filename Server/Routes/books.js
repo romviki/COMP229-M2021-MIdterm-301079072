@@ -75,5 +75,22 @@ router.post('/:id', (req, res, next) => {
     });
 });
 router.get('/delete/:id', (req, res, next) => {
+    let bookId = req.params.id;
+    books_1.default.remove({ "_id": bookId }, (err) => {
+        if (err) {
+            console.log(err);
+            res.end(err);
+        }
+        else {
+            books_1.default.remove({ "_id": bookId }, (err) => {
+                if (err) {
+                    console.log(err);
+                    res.end(err);
+                }
+                console.log("Delete id: " + bookId);
+            });
+            res.redirect('/books');
+        }
+    });
 });
 //# sourceMappingURL=books.js.map
