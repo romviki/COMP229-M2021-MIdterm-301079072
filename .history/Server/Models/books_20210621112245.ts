@@ -1,5 +1,3 @@
-/* books.ts : Viktoriia Romaniuk : 301079072 : Book List */
-
 import mongoose from 'mongoose';
 const Schema = mongoose.Schema; // Schema alias
 

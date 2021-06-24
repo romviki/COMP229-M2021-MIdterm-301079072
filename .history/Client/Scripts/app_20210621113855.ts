@@ -1,5 +1,3 @@
-/* app.ts : Viktoriia Romaniuk : 301079072 : Book List */
-
 //IIFE -- Immediately Invoked Function Expression
 "use strict";
 

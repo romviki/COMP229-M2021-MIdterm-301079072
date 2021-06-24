@@ -1,5 +1,3 @@
-/* server.ts : Viktoriia Romaniuk : 301079072 : Book List */
-
 import createError from 'http-errors';
 import app from './Server/Config/app';
 import debug from 'debug';
